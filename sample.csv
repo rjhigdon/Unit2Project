@@ -1,0 +1,7 @@
+size,name,price,flavor,vf,topping
+normal,Strawberry,4.0,strawberry,False,"strawberry slices, sprinkles"
+mini,Reese's,2.99,PB & Chocolate,False,Reese's minis
+normal,Cookies 'n' Cream,4.75,choocolate and sweet cream,False,Oreo Crumbles
+normal,zuccini,5.0,zuccini,True,
+large,pumpkin,6.5,pumpkin and spices,True,"icing, brown sugar"
+normal,Red Velvet,4.5,dark chocolate,False,"icing, red sprinkles"

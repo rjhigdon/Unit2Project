@@ -1,0 +1,6 @@
+body{
+    background-image: url("./Resources/cupcakes.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    color:brown;
+}
