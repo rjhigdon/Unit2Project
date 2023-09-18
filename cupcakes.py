@@ -128,3 +128,24 @@ def add_cupcake(file, cupcakes):
                 writer.writerow({"size": cupcake.size, "name": cupcake.name, "price": cupcake.price, "flavor": cupcake.flavor, "vf": cupcake.vf, "topping": ", ".join(cupcake.topping)})
             else:
                 writer.writerow({"size": cupcake.size, "name": cupcake.name, "price": cupcake.price, "flavor": cupcake.flavor, "vf": cupcake.vf})
+                
+def get_cupcakes(file):
+    with open (file) as csvfile:
+        reader = csv.DictReader(csvfile)
+        reader = list(reader)
+        return reader
+    
+def find_cupcake(file, name): 
+    for cupcake in get_cupcakes(file):
+        if cupcake["name"]==name:
+            return cupcake
+        else:
+            return "No cupcake by that name"
+
+def add_cupcake_dictionary(file, cupcake):
+    with open(file, "a", newline ="\n") as csvfile:
+        fieldnames = ["size", "name", "price", "flavor", "vf", "topping"]
+        writer = csv.DictWriter(csvfile, fieldnames = fieldnames)
+        writer.writerow(cupcake)
+        
+cupcake = find_cupcake("cupcakes.csv", "Strawberry")
